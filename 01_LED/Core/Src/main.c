@@ -101,13 +101,13 @@ int main(void)
 
 		for (uint8_t i = 0; i < 32; ++i) {
 
-			if () {
+			if (sequence & (1 << (31 - i))) {
 				LL_GPIO_SetOutputPin(LD2_GPIO_Port, LD2_Pin);
 			} else {
 				LL_GPIO_ResetOutputPin(LD2_GPIO_Port, LD2_Pin);
 			}
 
-			LL_mDelay(500);
+			LL_mDelay(100);
 
 		}
 
